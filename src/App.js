@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import axios from "axios";
+import Memo from "./components/Memo";
 
 class App extends React.Component {
   constructor(props) {
@@ -44,13 +45,7 @@ class App extends React.Component {
         {memoData === null
           ? "Loding..."
           : memoData.map((memo) => {
-              return (
-                <div key={memo.refKey}>
-                  <h1>{memo.title}</h1>
-                  <h3>{memo.content}</h3>
-                  <h4>{memo.regDate}</h4>
-                </div>
-              );
+              return <Memo key={memo.refKey} {...memo} />;
             })}
       </div>
     );
