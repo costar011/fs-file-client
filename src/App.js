@@ -45,7 +45,7 @@ class App extends React.Component {
         {memoData === null
           ? "Loding..."
           : memoData.map((memo) => {
-              return <Memo key={memo.refKey} {...memo} />;
+              return <Memo key={memo.refKey} />;
             })}
       </div>
     );
