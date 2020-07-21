@@ -1,14 +1,36 @@
 import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 500px;
+  height: 400px;
+  border: 1px soild rgba(200, 200, 200);
+  border-radius: 5px;
+  box-shadow: 2px 5px 4.5px rgba(200, 200, 200);
+  margin: 20px;
+`;
+
+const Title = styled.h2`
+  padding: 20px;
+`;
+
+const Content = styled.p`
+  padding: 10px;
+`;
+
+const RegDate = styled.div`
+  padding: 10px;
+`;
 
 // 객체인데 React Component기능을 가진 객체로 변환
 class Memo extends React.Component {
   render() {
     return (
-      <div>
-        <div>{this.props.title}</div>
-        <div>{this.props.content}</div>
-        <div>{this.props.regDate}</div>
-      </div>
+      <Container>
+        <Title>{this.props.title}</Title>
+        <Content>{this.props.content}</Content>
+        <RegDate>{this.props.regDate}</RegDate>
+      </Container>
     );
   }
 }
