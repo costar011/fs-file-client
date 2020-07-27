@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import axios from "axios";
 import Memo from "./components/Memo";
+import AddIcon from "@material-ui/icons/Add";
 
 class App extends React.Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class App extends React.Component {
     const { memoData } = this.state;
     return (
       <div>
+        <AddIcon onClick={this._registerMemo} />
         {memoData === null
           ? "Loding..."
           : memoData.map((memo) => {
@@ -50,5 +52,9 @@ class App extends React.Component {
       </div>
     );
   }
+
+  _registerMemo = () => {
+    alert("ok");
+  };
 }
 export default App;
